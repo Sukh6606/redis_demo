@@ -4,7 +4,7 @@
   "description": "demo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha test/**.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,16 @@
   },
   "homepage": "https://github.com/Sukh6606/redis_demo#readme",
   "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
     "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0"
   }
 }
