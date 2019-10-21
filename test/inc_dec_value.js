@@ -28,12 +28,12 @@ describe('Redis', () => {
       response = data;
     });
 
-    it('should not return error', done => {
+    it('should not return error', (done) => {
       expect(err).to.be.a('null');
       done();
     });
 
-    it('should return incremented value', done => {
+    it('should return incremented value', (done) => {
       expect(response).to.be.a('number');
       expect(response).to.equal(value + 1);
       done();
@@ -55,12 +55,12 @@ describe('Redis', () => {
       response = data;
     });
 
-    it('should not return error', done => {
+    it('should not return error', (done) => {
       expect(err).to.be.a('null');
       done();
     });
 
-    it('should return decremented value', done => {
+    it('should return decremented value', (done) => {
       expect(response).to.be.a('number');
       expect(response).to.equal(23);
       done();
@@ -70,7 +70,7 @@ describe('Redis', () => {
   describe('Delete all keys of current DB', () => {
     redis.delete_all();
 
-    it('should delete all the keys', done => {
+    it('should delete all the keys', (done) => {
       done();
     });
   });

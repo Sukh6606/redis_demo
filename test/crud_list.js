@@ -25,12 +25,12 @@ describe('Redis', () => {
         response = value;
       });
 
-      it('should not return error', done => {
+      it('should not return error', (done) => {
         expect(err).to.be.a('null');
         done();
       });
 
-      it('should return length of the list', done => {
+      it('should return length of the list', (done) => {
         expect(response).to.be.a('number');
         done();
       });
@@ -46,17 +46,17 @@ describe('Redis', () => {
         resp = value;
       });
 
-      it('should not return error', done => {
+      it('should not return error', (done) => {
         expect(err).to.be.a('null');
         done();
       });
 
-      it('should return length of the list', done => {
+      it('should return length of the list', (done) => {
         expect(resp).to.be.a('number');
         done();
       });
 
-      it('should return length 1', done => {
+      it('should return length 1', (done) => {
         expect(resp).to.equal(1);
         done();
       });
@@ -72,12 +72,12 @@ describe('Redis', () => {
       response = data;
     });
 
-    it('should not return error', done => {
+    it('should not return error', (done) => {
       expect(err).to.be.a('null');
       done();
     });
 
-    it('should return list values', done => {
+    it('should return list values', (done) => {
       expect(response).to.be.an('array');
       done();
     });
@@ -94,17 +94,17 @@ describe('Redis', () => {
       response = data;
     });
 
-    it('should not return error', done => {
+    it('should not return error', (done) => {
       expect(err).to.be.a('null');
       done();
     });
 
-    it('should return list values', done => {
+    it('should return list values', (done) => {
       expect(response).to.be.a('number');
       done();
     });
 
-    it('should not include one', done => {
+    it('should not include one', (done) => {
       redis.get_list(key, (err, data) => {
         expect(err).to.be.a('null');
         expect(data).to.not.include('one');

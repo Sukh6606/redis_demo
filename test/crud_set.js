@@ -24,12 +24,12 @@ describe('Redis', () => {
       response = data;
     });
 
-    it('should not return error', done => {
+    it('should not return error', (done) => {
       expect(err).to.be.a('null');
       done();
     });
 
-    it('should return number of elements added to the set', done => {
+    it('should return number of elements added to the set', (done) => {
       expect(response).to.be.a('number');
       expect(response).to.equal(1);
       done();
@@ -45,12 +45,12 @@ describe('Redis', () => {
       response = data;
     });
 
-    it('should not return error', done => {
+    it('should not return error', (done) => {
       expect(err).to.be.a('null');
       done();
     });
 
-    it('should return all the values of set', done => {
+    it('should return all the values of set', (done) => {
       expect(response).to.be.an('array');
       expect(response).to.eql(['one']);
       done();
@@ -66,12 +66,12 @@ describe('Redis', () => {
       response = data;
     });
 
-    it('should not return error', done => {
+    it('should not return error', (done) => {
       expect(err).to.be.a('null');
       done();
     });
 
-    it('should remove one or more random values', done => {
+    it('should remove one or more random values', (done) => {
       expect(response).to.exist;
       done();
     });
@@ -87,12 +87,12 @@ describe('Redis', () => {
       response = data;
     });
 
-    it('should not return error', done => {
+    it('should not return error', (done) => {
       expect(err).to.be.a('null');
       done();
     });
 
-    it('should return number of values removed from the set', done => {
+    it('should return number of values removed from the set', (done) => {
       expect(response).to.be.a('number');
       done();
     });

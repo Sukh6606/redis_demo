@@ -20,7 +20,7 @@ function check_no_error (err, callback) {
 
 describe('Redis', () => {
   describe('Connect', () => {
-    it('should connect and return no object', done => {
+    it('should connect and return no object', (done) => {
       const connect = redis.connect();
       expect(connect).to.be.an('undefined');
       done();
@@ -38,11 +38,11 @@ describe('Redis', () => {
         response = data;
       });
 
-      it('should not return error', done => {
+      it('should not return error', (done) => {
         check_no_error(err, done);
       });
 
-      it('should return OK', done => {
+      it('should return OK', (done) => {
         expect(response).to.equal('OK');
         done();
       });
@@ -58,19 +58,19 @@ describe('Redis', () => {
         response = data;
       });
 
-      it('should not return error', done => {
+      it('should not return error', (done) => {
         expect(err).to.be.a('null');
         done();
       });
 
-      it('should return OK', done => {
+      it('should return OK', (done) => {
         expect(response).to.equal('OK');
         done();
       });
 
-      it('should get null value', done => {
+      it('should get null value', (done) => {
         setTimeout(() => {
-          redis.get(key, (error, data) => {
+          redis.get(key, (_error, data) => {
             expect(data).to.equal(null);
             done();
           });
@@ -88,12 +88,12 @@ describe('Redis', () => {
         response = data;
       });
 
-      it('should not return error', done => {
+      it('should not return error', (done) => {
         expect(err).to.be.a('null');
         done();
       });
 
-      it('should return OK', done => {
+      it('should return OK', (done) => {
         expect(response).to.equal('OK');
         done();
       });
@@ -109,12 +109,12 @@ describe('Redis', () => {
       response = data;
     });
 
-    it('should return value without an error', done => {
+    it('should return value without an error', (done) => {
       expect(err).to.be.a('null');
       done();
     });
 
-    it('should return value red', done => {
+    it('should return value red', (done) => {
       expect(response).to.equal('red');
       done();
     });
@@ -129,12 +129,12 @@ describe('Redis', () => {
       deleteResponse = data;
     });
 
-    it('should not return error', done => {
+    it('should not return error', (done) => {
       expect(err).to.be.a('null');
       done();
     });
 
-    it('should return integer value', done => {
+    it('should return integer value', (done) => {
       expect(deleteResponse).to.be.a('number');
       done();
     });
@@ -144,7 +144,7 @@ describe('Redis', () => {
       getResponse = data;
     });
 
-    it('should return null value after deletion', done => {
+    it('should return null value after deletion', (done) => {
       expect(getResponse).to.be.a('null');
       done();
     });
