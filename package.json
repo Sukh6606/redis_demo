@@ -1,0 +1,25 @@
+{
+  "name": "redis_demo",
+  "version": "1.0.0",
+  "description": "demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sukh6606/redis_demo.git"
+  },
+  "keywords": [
+    "redis"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sukh6606/redis_demo/issues"
+  },
+  "homepage": "https://github.com/Sukh6606/redis_demo#readme",
+  "dependencies": {
+    "redis": "^2.8.0"
+  }
+}
