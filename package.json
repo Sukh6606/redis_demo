@@ -21,7 +21,7 @@
   "homepage": "https://github.com/Sukh6606/redis_demo#readme",
   "dependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.1.4",
+    "mocha": "^10.2.0",
     "redis": "^2.8.0"
   },
   "devDependencies": {
